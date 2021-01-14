@@ -1,0 +1,40 @@
+.user-data > *{
+    display: inline-block;
+    padding: 5px;
+}
+
+.user-data{
+    padding: 5px;
+}
+
+.user-email{
+    background: #ff4f6c;
+    border-radius: 9px;
+    color: blanchedalmond;
+}
+section{
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fffac4;
+    width: 50%;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+#modify-button{
+    transition: 0.4s;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px;
+    color: wheat;
+    background-color: #6fb53a;
+}
+
+
+#modify-button:hover{
+    cursor:pointer;
+    background-color: #88db48;
+    transition: 0.4s;
+}

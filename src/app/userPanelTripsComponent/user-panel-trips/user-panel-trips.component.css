@@ -1,0 +1,18 @@
+.trip-display{
+    background-color: #f7f0eb;
+    margin-bottom: 10px;
+    width: 50%;
+    padding: 12px;
+    border-radius: 15px;
+    min-width: 250px;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+}
+
+
+.trip-display input{
+    width: 200px;
+}
+
+

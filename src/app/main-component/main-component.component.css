@@ -1,0 +1,21 @@
+@media(max-width: 900px){
+    #router-outlet-wrapper{
+        margin-top: 70px;
+       
+    }
+ 
+}
+@media(min-width: 901px){
+    #router-outlet-wrapper{
+        margin-top: 70px;
+        
+    }
+
+}
+
+app-top-menu{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}

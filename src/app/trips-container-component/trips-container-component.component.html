@@ -1,0 +1,15 @@
+<section>
+    <div class="grid-col-1">
+        <ng-container *ngFor="let trip of (getTrips() | searchCountry : listOfCountries | searchPrice : minPrice : maxPrice | searchByDate: minDate : maxDate | searchByRate : minRate : maxRate | canSeeArchiwal : user | canSeeWithoutPlaces : user); let i = index">
+            <app-trip-component 
+            [trip] = "trip"
+            (eventDelete) = "deleteInfo($event)"
+            (submit) = "addTrip($event)"
+            >
+            </app-trip-component>
+        </ng-container>
+    </div>
+    <app-filter-trip class="grid-col-2"></app-filter-trip>
+</section>
+
+

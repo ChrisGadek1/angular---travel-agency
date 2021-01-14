@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "finalTravelAgency": {
+    "project-trips": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/finalTravelAgency",
+            "outputPath": "dist/project-trips",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "finalTravelAgency:build"
+            "browserTarget": "project-trips:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "finalTravelAgency:build:production"
+              "browserTarget": "project-trips:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "finalTravelAgency:build"
+            "browserTarget": "project-trips:build"
           }
         },
         "test": {
@@ -110,15 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "finalTravelAgency:serve"
+            "devServerTarget": "project-trips:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "finalTravelAgency:serve:production"
+              "devServerTarget": "project-trips:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "finalTravelAgency"
+    }
+  },
+  "defaultProject": "project-trips",
+  "cli": {
+    "analytics": "8d35cae3-a5bc-4bcc-a97c-365d63d8b0d5"
+  }
 }

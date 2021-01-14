@@ -1,0 +1,9 @@
+app-main-component{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 70vw 28vw;
+}
+html{
+    font-family: 'Quicksand', sans-serif;
+}

@@ -1,0 +1,45 @@
+<div class="trip-display-element">
+    <div>url zdjęcia</div>
+    <input #imgURLInput type="text" value="{{trip.imgSRC}}">
+</div>
+<div>podgląd:</div>
+<img src="{{trip.imgSRC}}" alt="nie można załadować">
+<div class="trip-display-element">
+    <div>tytuł: </div>
+    <input #nameInput type="text" value="{{trip.name}}">
+</div>
+<div class="trip-display-element">
+    <div>opis: </div>
+    <textarea #describtion>{{trip.describtion}}</textarea>
+</div>
+
+<div class="trip-display-element">
+    <div>max osób</div>
+    <input type="number" name="" #maxPeopleInput value="{{trip.maxPeople}}">
+</div>
+<div class="trip-display-element">
+    <div>kraj: </div>
+    <select id="{{'selectModify'+trip.id}}"   #countryInput >
+        <option value="{{trip.country}}"  selected>{{trip.country}}</option>
+        <option *ngFor="let country of countries" value="{{country}}">{{country}}</option>
+   </select>
+</div>
+<div class="trip-display-element">
+    <div class="inner-date">
+        <div>początek</div>
+        <input type="date" name="" #beginDateInput value="{{parseDateToAnsi(trip.beginDate)}}">
+    </div>
+    <div class="inner-date">
+        <div>koniec</div>
+        <input type="date" name="" #endDateInput value="{{parseDateToAnsi(trip.endDate)}}">
+    </div>
+</div>
+<div class="trip-display-element">
+    <div>cena</div>
+    <input type="number" name="" #priceInput value="{{trip.price}}">
+</div>
+<div class="trip-display-element">
+    <div *ngIf="permission != undefined && permission.canDelete" id="delete-button" (click)="delete()">Usuń wycieczkę</div>
+    <div  id="modify-button" (click)="modify()">Zatwierdź modyfikacje</div>
+</div>
+

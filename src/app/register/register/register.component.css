@@ -1,0 +1,27 @@
+.control{
+    display: block;
+}
+
+.error-info{
+    font-size: 15px;
+    color: red;
+}
+
+#form-section{
+    margin-top: 20vh;
+    display: inline-block;
+    text-align: left;
+    background-color: #ffdfb3;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+form > *{
+    margin: 7px;
+    font-size: 20px;
+}
+
+section{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}

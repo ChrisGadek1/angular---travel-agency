@@ -1,0 +1,9 @@
+<nav>
+    <div class="menu-button" routerLink="/" routerLinkActive="active">wycieczki</div>
+    <div *ngIf="user != null && user != undefined && userWithPermissions != undefined && userWithPermissions.permissions.canAddAndModify" class="menu-button" routerLink="/addTrip" routerLinkActive="active">dodaj</div>
+    <div *ngIf="user != null && user != undefined" class="menu-button" routerLink="/basket" routerLinkActive="active"><i class="icon-basket"></i>{{"koszyk: "}}</div>
+    <div class="menu-button" routerLink="/login" routerLinkActive="active">{{user != null && user != undefined ? "wyloguj":"logowanie"}}</div>
+    <div *ngIf="user != null && user != undefined; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock><div class="menu-button" routerLink="/user" routerLinkActive="active"><i class="icon-user"></i>{{user.email}}</div></ng-template>
+    <ng-template #elseBlock><div class="menu-button" routerLink="/register" routerLinkActive="active">rejestracja</div></ng-template>
+</nav>

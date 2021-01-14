@@ -1,0 +1,7 @@
+<section>
+    <ng-container *ngFor="let trip of trips">
+        <div class="trip-display">
+            <app-modify-trip [trip]="trip"></app-modify-trip>
+        </div>
+    </ng-container>
+</section>

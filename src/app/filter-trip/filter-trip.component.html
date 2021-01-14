@@ -1,0 +1,49 @@
+<section>
+    <div id="icon-wrapper" #downIconFilter>
+        <i class="icon-down-open" ></i>
+    </div>
+    <div id="add-title">Filtruj</div>
+    <div id="filterTripForm" class="minSizeForm">
+        <div id="filter-country" class="filter-box">
+            <input type="checkbox" id="country-chechbox">
+            <label for="country">Kraj</label>
+            <div class="filter-input disabled" >
+                <input type="button" value="Dodaj kolejny kraj" id="add-country-button">
+                <div #placeToAddCountryList>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="filter-price" class="filter-box">
+            <input type="checkbox" id="price-checkbox">
+            <label for="price">Cena</label>
+            <div class="filter-input disabled">
+                <div>zakresy cen: od {{minPrice}} do {{maxPrice}}</div>
+                <input type="number" name="begin-price" id="price-filter-minimum" (input)="getMinimumPriceHTML()">
+                <label>-</label>
+                <input type="number" name="end-price" id="price-filter-maximum" (input) = "getMaximumPriceHTML()">
+            </div>
+        </div>
+        <div id="date-filter" class="filter-box">
+            <input type="checkbox" id="date-checkbox">
+            <label for="date">Data</label>
+            <div class="filter-input disabled">
+                <div>zakresy dat: od {{minDate}} do {{maxDate }}</div>
+                <input type="date" name="date-begin" id="begin-data-filter" (change)="getMinimumDateHTML()">
+                <label>-</label>
+                <input type="date" name="date-end" id="end-data-filter" (change)="getMaximumDateHTML()">
+            </div>
+        </div>
+        <div id="rate-filter" class="filter-box">
+            <input type="checkbox" id="rate-checkbox">
+            <label for="rate">Ocena</label>
+            <div class="filter-input disabled">
+                <div>zakresy ocen: od {{minRate}} do {{maxRate}}</div>
+                <input type="number" name="rate-begin" id="rate-filter-minimum" (input)="getMinimumRateHTML()">
+                <label>-</label>
+                <input type="number" name="rate-end" id="rate-filter-maximum" (input)="getMaximumRateHTML()">
+            </div>
+        </div>
+    </div>
+</section>

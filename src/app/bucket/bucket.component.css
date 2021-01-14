@@ -1,0 +1,53 @@
+#add-title{
+    display: inline-block;
+}
+
+section{
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+    background-color: #ffdfb3;
+    border-radius: 10px;
+}
+
+#bucket-container{
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+#icon-wrapper{
+    display: inline-block;
+    transition: 0.4s;
+}
+
+.trip-container{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff424f;
+    margin-bottom: 5px;
+    
+}
+
+#total-sum{
+    float: right;
+    
+}
+
+.people-number{
+    margin-top: 4px;
+    background-color: #d4cbcc;
+    display: inline-block;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.trip-title{
+    font-size: 20px;
+    background-color: #d62f3b;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.trip-container:first-child{
+    margin-top: 10px;
+}

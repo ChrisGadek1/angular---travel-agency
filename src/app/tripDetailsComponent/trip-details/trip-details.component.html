@@ -1,0 +1,33 @@
+<section class="wrapper gap-outer">
+    <div  id="img-container" class="grid-col-1">
+        <img src="{{trip.imgSRC}}" alt="nie można załadować zdjęcia">
+    </div>
+    <section class="grid-col-2">
+        <div id="title-and-price" class="wrapper gap-inner">
+            <div id="trip-title" class="grid-col-1">{{ trip.name | uppercase }}</div>
+            <div class="grid-col-2" id="trip-price">
+                <div>cena wycieczki: {{ trip.price }} {{trip.currency}}</div>
+            </div>
+        </div>
+        <div id="main-desc" class="wrapper gap-inner">
+            <app-delete-trip
+            [trip]="trip"
+            class="grid-col-1"></app-delete-trip>
+            <div class="grid-col-2" id="trip-desc">{{ trip.describtion }}</div>
+        </div>
+        <div class="wrapper-3 gap-inner">
+            <app-rating-component *ngIf="user != null"
+            [trip]="trip"
+            [text]="'twoja ocena'"
+            class="grid-col-1" ></app-rating-component>
+            <app-rating-component
+            [trip]="trip"
+            [text]="'średnia ocena'"
+            class="grid-col-1" ></app-rating-component>
+            <div class="grid-col-2" id="info">
+                <div>kraj: {{trip.country | uppercase}}</div>
+                <div>termin: {{trip.beginDate+" - "+trip.endDate}}</div>
+            </div>
+        </div>
+    </section>
+</section>

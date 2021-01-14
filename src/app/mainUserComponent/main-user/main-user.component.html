@@ -1,0 +1,19 @@
+<section>
+    <nav id="user-nav">
+        <div class="menu-element" (click)="setPanel(0)">Moje konto</div>
+        <div *ngIf="permission != undefined && permission.canAddAndModify" class="menu-element" (click)="setPanel(1)">zarządzaj wycieczkami</div>
+        <div *ngIf="permission != undefined && permission.canDelete" class="menu-element" (click)="setPanel(2)">zarządzaj użytkownikami</div>
+    </nav>
+    <main>
+        <div *ngIf="clicked==0">
+            <app-user-panel-data></app-user-panel-data>
+            
+        </div>
+        <div *ngIf="clicked==1">
+            <app-user-panel-trips></app-user-panel-trips>
+        </div>
+        <div *ngIf="clicked==2">
+            <app-user-panel-users></app-user-panel-users>
+        </div>
+    </main>
+</section>

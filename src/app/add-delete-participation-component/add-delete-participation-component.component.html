@@ -1,0 +1,6 @@
+<div *ngIf="auth.user != null">Zarezerwuj miejsce!</div>
+<input *ngIf="auth.user != null" #incButton type="button" value="+" (click)="decrement()">
+<input *ngIf="auth.user != null" #decButton type="button" value="-" (click)="increment()">
+<div #quantityLabel>wolnych miejsc: {{free}}</div>
+<div *ngIf="auth.user != null">miejsc zajętych przez Ciebie: {{booked}}</div>
+<div #errorLabel id="error-label"></div>

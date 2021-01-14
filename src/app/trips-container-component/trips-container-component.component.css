@@ -1,0 +1,49 @@
+section{
+    display: grid;
+    grid-template-columns: 70vw 25vw;
+    
+}
+
+
+@media(max-width:900px){
+    .grid-col-1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .grid-col-2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media(min-width:901px){
+    section{
+        grid-gap: 3vw;
+    }
+    .grid-col-1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .grid-col-2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+app-trip-component{
+    display: block;
+    background-color: #ebebdf;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.theCheapest{
+    border: 4px solid red;
+}
+
+.theMostExpensive{
+    border: 4px solid green;
+}

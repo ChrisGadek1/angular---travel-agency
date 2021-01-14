@@ -1,0 +1,19 @@
+nav{
+    display: flex;
+    background-color: #ffdfb3;
+}
+.menu-button{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    padding: 20px 35px 20px 35px;
+    transition: 0.4s;
+}
+
+.menu-button:hover{
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: #fce1c0;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,44 @@
+
+#delete-button{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px;
+    color: wheat;
+    background-color: red;
+    transition: 0.4s;
+}
+
+#delete-button:hover{
+    cursor: pointer;
+    background-color: #e86d73;
+    transition: 0.4s;
+}
+
+#modify-button{
+    transition: 0.4s;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px;
+    color: wheat;
+    background-color: #6fb53a;
+}
+
+#modify-button:hover{
+    cursor:pointer;
+    background-color: #88db48;
+    transition: 0.4s;
+}
+
+img{
+    max-width: 50%;
+}
+
+.inner-date > *{
+    display: inline-block;
+}
+
+
+.trip-display-element > *{
+    display: inline-block;
+    margin: 5px;
+}

@@ -1,0 +1,12 @@
+<section>
+    <div id="bucket-container" >
+        <ng-container *ngFor="let bucket of buckets">
+            <div class="trip-container">
+                <div class="trip-title">{{getTripById(bucket.tripID).name}}</div>
+                <div>{{"cena jednostkowa: "+getTripById(bucket.tripID).price}}</div>
+                <div>{{"kraj: "+getTripById(bucket.tripID).country}}</div>
+                <div class="people-number">{{"ilość osób: "+bucket.number}}</div>
+            </div>
+        </ng-container>
+    </div>
+</section>

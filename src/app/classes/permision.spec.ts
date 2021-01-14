@@ -1,0 +1,2 @@
+import { Permision } from './permision';
+

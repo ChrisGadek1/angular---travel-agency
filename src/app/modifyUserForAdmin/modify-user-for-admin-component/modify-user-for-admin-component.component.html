@@ -1,0 +1,18 @@
+<section>
+    <div class="user-data">
+        <div>email:</div>
+        <div class="user-email">{{user.email}}</div>
+    </div>
+    <div class="user-data">
+        <div>uprawnienia:</div>
+        <select id="{{'permissionsSelect'+user.permissions.name}}" (change)=(changePermissions())>
+            <option value="{{user.permissions.name}}" selected>{{user.permissions.name}}</option>
+            <ng-container *ngFor="let permision of permissions">
+                <option *ngIf="permision.name != user.permissions.name" value="{{permision.name}}">{{permision.name}}</option>
+            </ng-container>
+        </select>
+    </div>
+    <div class="user-data">
+        <div  id="modify-button" (click)="confirm()">Zatwierdź modyfikacje</div>
+    </div>
+</section>

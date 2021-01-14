@@ -1,0 +1,16 @@
+<section>
+    <div id="form-section">
+        <form [formGroup] = "registerForm" (ngSubmit) = "submit()" >
+            <label for="email" class="control">E-mail</label>
+            <input type="email" formControlName="email" name="email" id="email-input" class="control">
+            <span class="error-info" *ngIf="formErrors.email">{{ formErrors.email }}</span>
+            <label for="password"  class="control">Hasło</label>
+            <input type="password" formControlName="password" name="password" id="password-input" class="control">
+            <span class="error-info" *ngIf="formErrors.password">{{ formErrors.password }}</span>
+            <label for="retypePassword" class="control">Powtórz Hasło</label>
+            <input type="password" formControlName="retypePassword" name="retypePassword" id="retype-password-input" class="control">
+            <span class="error-info" *ngIf="formErrors.retypePassword">{{ formErrors.retypePassword }}</span>
+            <input type="submit" [disabled]="!registerForm.valid" value="Zarejestruj" class="control">
+        </form>
+    </div>
+</section>

@@ -1,0 +1,127 @@
+section{
+    font-family: 'Quicksand', sans-serif;
+    display: block;
+    background-color: #ebebdf;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#trip-price{
+    text-align: center;
+    font-size: 25px;
+}
+
+#trip-title{
+    font-size: 25px;
+    margin-left: 15%;
+}
+
+#trip-price div{
+    display: inline;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 2;
+}
+
+.wrapper-3{
+    display: grid;
+    grid-template-columns: 3;
+    padding-bottom: 20px;
+}
+
+img{
+    max-width: 200px;
+    max-height: 195px;
+    clip-path: circle(50% at 50% 50%);
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+#img-container{
+    margin: auto;
+}
+
+#trip-desc{
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+app-delete-trip{
+    background-color: #ffc56e;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+#info{
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    padding: 5px;
+}
+
+.wrapper:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.gap-outer{
+    grid-gap: 2%;
+}
+
+.gap-inner{
+    grid-gap: 5%;
+}
+
+@media(max-width: 900px){
+    .grid-col-1{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    .grid-col-2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .grid-col-3{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}
+
+@media(min-width: 901px){
+    .grid-col-1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .grid-col-2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    
+    .grid-col-3{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+}
+
+
+
+input[type=button]{
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ff7559;
+}
+
+#button-container{
+    text-align: right;
+}

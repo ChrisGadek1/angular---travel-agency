@@ -1,5 +1,5 @@
 {
-  "name": "final-travel-agency",
+  "name": "project-trips",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -15,10 +15,14 @@
     "@angular/common": "~10.1.6",
     "@angular/compiler": "~10.1.6",
     "@angular/core": "~10.1.6",
+    "@angular/fire": "^6.1.4",
     "@angular/forms": "~10.1.6",
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
+    "angularfire2": "^5.4.2",
+    "firebase": "^8.2.1",
+    "firebase-admin": "^9.4.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

@@ -1,0 +1,10 @@
+<div id="select-wrapper">
+    <select name="country" (change)="onChange($event)" #select>
+        <option value="" disabled="true" selected>Wybierz Kraj</option>
+        <ng-container *ngFor="let country of countries">
+            <option value="{{country}}">{{country}}</option>
+        </ng-container>
+    </select>
+    <input type="button" value="usuń" #deleteButton>
+</div>
+

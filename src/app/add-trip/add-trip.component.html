@@ -1,0 +1,25 @@
+<section>
+   <form [formGroup] = "addTripForm" (ngSubmit) = "submit()" id="addTripForm" class="minSizeForm">
+       <label for="name">Nazwa wycieczki</label><input type="text" name="name" formControlName="name">
+       <span class="error-info" *ngIf="formErrors.name">{{ formErrors.name }}</span>
+       <label for="describtion">Opis Wycieczki</label><textarea name="describtion" formControlName="describtion"></textarea>
+       <span class="error-info" *ngIf="formErrors.describtion">{{ formErrors.describtion }}</span>
+       <label for="country">Kraj</label><select name="country" formControlName="country">
+            <option value="" disabled="true">Wybierz Kraj</option>
+            <ng-container *ngFor="let country of countries">
+               <option value="{{country}}">{{country}}</option>
+            </ng-container>
+       </select>
+       <span class="error-info" *ngIf="formErrors.country">{{ formErrors.country }}</span>
+       <label for="beginDate">Data rozpoczęcia</label><input type="date" name="beginDate" formControlName="beginDate">
+       <span class="error-info" *ngIf="formErrors.beginDate">{{ formErrors.beginDate }}</span>
+       <label for="endDate">Data zakończenia</label><input type="date" name="endDate" formControlName="endDate">
+       <span class="error-info" *ngIf="formErrors.endDate">{{ formErrors.endDate }}</span>
+       <label for="maxPeople">Maksymalna ilość miejsc</label><input type="number"  name="maxPeople" formControlName="maxPeople">
+       <span class="error-info" *ngIf="formErrors.maxPeople">{{ formErrors.maxPeople }}</span>
+       <label for="maxPeople">cena</label><input type="number"  name="price" formControlName="price">
+       <span class="error-info" *ngIf="formErrors.price">{{ formErrors.price }}</span>
+       <label for="imgSRC">Link do zdjęcia (maks 100KB oraz musi być kwadratowe) - Pole opcjonalne</label><input type="url" name="imgSRC" formControlName="imgSRC">
+       <input type="submit" [disabled]="!addTripForm.valid" value="dodaj">
+   </form>
+</section>
